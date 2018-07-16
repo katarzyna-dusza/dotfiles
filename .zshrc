@@ -122,6 +122,7 @@ git st;
 # create new branch
 alias cb='git co -b $@'
 
+# list remotes
 alias r-v='git remote -v'
 
 # create mirror repo 
@@ -144,17 +145,17 @@ alias h-docker='eval $(minikube docker-env)'
 # git log pretty
 alias glola="git log --graph --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all --author-date-order"
 
-# zsh-bd
-#. $HOME/.zsh/plugins/bd/bd.zsh
-
-# the most usable commnands
-#setopt auto_cd
-#cdpath=($HOME/Hybris $HOME/Projects)
 
 # processes
 alias list-process='ps aux'
 alias kill-process='sudo kill $@'
 alias find-process='lsof -t -i:$@'
+
+# count files in the current dir
+alias count-files='find . -type f | wc -l'
+
+# print directory structure as a tree
+alias tree='ls -R | grep ":$" | sed -e '"'"'s/:$//'"'"' -e '"'"'s/[^-][^\/]    *\//--/g'"'"' -e '"'"'s/^/   /'"'"' -e '"'"'s/-/|/'"'"
 
 # replace like in git rebase:
 # * on the word -> cgnWORD_TO_REPLACE<ESC> -> . on every word to be replaced
