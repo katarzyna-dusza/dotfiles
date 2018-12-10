@@ -9,6 +9,7 @@ This repo contains my custom settings and aliases.
 - homebrew (in case of mac users)
 - zsh
 - python
+- iterm2
 
 ## Tools
 - [zsh](https://ohmyz.sh/)
